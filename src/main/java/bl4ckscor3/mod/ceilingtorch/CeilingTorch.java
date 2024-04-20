@@ -19,7 +19,6 @@ import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.common.Mod.EventBusSubscriber;
 import net.neoforged.fml.common.Mod.EventBusSubscriber.Bus;
-import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.RegisterEvent;
 
@@ -33,9 +32,7 @@ public class CeilingTorch {
 	public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, MODID);
 	private static boolean initialized = false;
 
-	public CeilingTorch() {
-		IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
-
+	public CeilingTorch(IEventBus modBus) {
 		CompatConfig.init(ModLoadingContext.get());
 		BLOCKS.register(modBus);
 		BLOCK_ENTITIES.register(modBus);

@@ -4,8 +4,8 @@ import java.util.function.Supplier;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -16,6 +16,7 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.TorchBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -25,8 +26,8 @@ public class CeilingTorchBlock extends TorchBlock {
 	public static final VoxelShape CEILING_SHAPE = Block.box(6.0D, 6.0D, 6.0D, 10.0D, 16.0D, 10.0D);
 	private final Supplier<? extends Block> originalBlock;
 
-	public CeilingTorchBlock(Block.Properties properties, ParticleOptions particleData, Supplier<? extends Block> originalBlock) {
-		super(properties.lootFrom(originalBlock), particleData);
+	public CeilingTorchBlock(BlockBehaviour.Properties properties, SimpleParticleType particle, Supplier<? extends Block> originalBlock) {
+		super(particle, properties.lootFrom(originalBlock));
 
 		this.originalBlock = originalBlock;
 	}
@@ -57,7 +58,7 @@ public class CeilingTorchBlock extends TorchBlock {
 	}
 
 	@Override
-	public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter level, BlockPos pos, Player player) {
+	public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
 		return new ItemStack(getOriginalBlock());
 	}
 

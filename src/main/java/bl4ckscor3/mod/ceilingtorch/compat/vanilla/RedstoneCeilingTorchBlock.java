@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -68,12 +69,12 @@ public class RedstoneCeilingTorchBlock extends RedstoneTorchBlock {
 			double y = pos.getY() + 0.7D + (rand.nextDouble() - 0.5D) * 0.2D;
 			double z = pos.getZ() + 0.5D + (rand.nextDouble() - 0.5D) * 0.2D;
 
-			world.addParticle(flameParticle, x, y - 0.25D, z, 0.0D, 0.0D, 0.0D);
+			world.addParticle(DustParticleOptions.REDSTONE, x, y - 0.25D, z, 0.0D, 0.0D, 0.0D);
 		}
 	}
 
 	@Override
-	public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
+	public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader world, BlockPos pos, Player player) {
 		return new ItemStack(originalBlock.get());
 	}
 

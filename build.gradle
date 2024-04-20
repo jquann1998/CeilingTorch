@@ -9,7 +9,7 @@ version = '1.27'
 group = 'bl4ckscor3.mod.ceilingtorch'
 
 base {
-	archivesName = 'ceilingtorch-1.20.2'
+	archivesName = 'ceilingtorch-1.20.4'
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -43,9 +43,9 @@ repositories {
 }
 
 dependencies {
-	implementation 'net.neoforged:neoforge:20.2.88'
+	implementation 'net.neoforged:neoforge:20.4.232'
 
-	implementation "curse.maven:sbm-bone-torch-238695:4883926"
+	implementation "curse.maven:sbm-bone-torch-238695:4949126"
 	implementation "curse.maven:tofucraftreload-317469:4925744"
 }
 

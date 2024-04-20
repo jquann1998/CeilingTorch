@@ -2,8 +2,6 @@ package bl4ckscor3.mod.ceilingtorch.compat.tofucraft;
 
 import java.util.Map;
 
-import com.google.common.collect.ImmutableMap;
-
 import baguchan.tofucraft.registry.TofuBlocks;
 import bl4ckscor3.mod.ceilingtorch.CeilingTorch;
 import bl4ckscor3.mod.ceilingtorch.ICeilingTorchCompat;
@@ -66,7 +64,7 @@ public class TofuCraftCompat implements ICeilingTorchCompat {
 	public Map<ResourceLocation, Block> getPlaceEntries() {
 		if (placeEntries == null) {
 			//@formatter:off
-			placeEntries = ImmutableMap.of(getRegistryName(TofuBlocks.TOFUTORCH_MOMEN.get()), TOFU_CEILING_TORCH_MOMEN.get(),
+			placeEntries = Map.of(getRegistryName(TofuBlocks.TOFUTORCH_MOMEN.get()), TOFU_CEILING_TORCH_MOMEN.get(),
 					getRegistryName(TofuBlocks.TOFUTORCH_ISHI.get()), TOFU_CEILING_TORCH_ISHI.get(),
 					getRegistryName(TofuBlocks.TOFUTORCH_METAL.get()), TOFU_CEILING_TORCH_METAL.get(),
 					getRegistryName(TofuBlocks.TOFUTORCH_KINU.get()), TOFU_CEILING_TORCH_KINU.get(),
