@@ -9,6 +9,7 @@ import com.electronwill.nightconfig.core.io.WritingMode;
 import bl4ckscor3.mod.ceilingtorch.compat.adorn.AdornCompat;
 import bl4ckscor3.mod.ceilingtorch.compat.bambooeverything.BambooEverythingCompat;
 import bl4ckscor3.mod.ceilingtorch.compat.bonetorch.BoneTorchCompat;
+import bl4ckscor3.mod.ceilingtorch.compat.chipped.ChippedCompat;
 import bl4ckscor3.mod.ceilingtorch.compat.tofucraft.TofuCraftCompat;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.config.ModConfig;
@@ -51,6 +52,7 @@ public class CompatConfig {
 		builtInCompat = Map.ofEntries(
 				makeEntry(builder, "adorn", () -> AdornCompat::new),
 				makeEntry(builder, "bambooeverything", () -> BambooEverythingCompat::new),
+				makeEntry(builder, "chipped", () -> ChippedCompat::new),
 				makeEntry(builder, "bonetorch", () -> BoneTorchCompat::new),
 				makeEntry(builder, "tofucraft", () -> TofuCraftCompat::new));
 		//@formatter:on
