@@ -57,6 +57,18 @@ public class TofuCraftCompat implements ICeilingTorchCompat {
 			.noOcclusion()
 			.sound(SoundType.SNOW),
 			ParticleTypes.FLAME, TofuBlocks.TOFUTORCH_ZUNDA));
+	public static final DeferredBlock<CeilingTorchBlock> TOFU_CEILING_TORCH_HELL = CeilingTorch.BLOCKS.register("tofucraft_tofutorch_hell", () -> new CeilingTorchBlock(BlockBehaviour.Properties.of()
+			.strength(0.0F, 0.5F)
+			.lightLevel(state -> 14)
+			.noOcclusion()
+			.sound(SoundType.SNOW),
+			ParticleTypes.FLAME, TofuBlocks.TOFUTORCH_HELL));
+	public static final DeferredBlock<CeilingTorchBlock> TOFU_CEILING_TORCH_SOUL = CeilingTorch.BLOCKS.register("tofucraft_tofutorch_soul", () -> new CeilingTorchBlock(BlockBehaviour.Properties.of()
+			.strength(0.0F, 0.5F)
+			.lightLevel(state -> 14)
+			.noOcclusion()
+			.sound(SoundType.SNOW),
+			ParticleTypes.FLAME, TofuBlocks.TOFUTORCH_SOUL));
 	//@formatter:on
 	private Map<ResourceLocation, Block> placeEntries;
 
@@ -69,7 +81,9 @@ public class TofuCraftCompat implements ICeilingTorchCompat {
 					getRegistryName(TofuBlocks.TOFUTORCH_METAL.get()), TOFU_CEILING_TORCH_METAL.get(),
 					getRegistryName(TofuBlocks.TOFUTORCH_KINU.get()), TOFU_CEILING_TORCH_KINU.get(),
 					getRegistryName(TofuBlocks.TOFUTORCH_GRILLED.get()), TOFU_CEILING_TORCH_GRILLED.get(),
-					getRegistryName(TofuBlocks.TOFUTORCH_ZUNDA.get()), TOFU_CEILING_TORCH_ZUNDA.get());
+					getRegistryName(TofuBlocks.TOFUTORCH_ZUNDA.get()), TOFU_CEILING_TORCH_ZUNDA.get(),
+					getRegistryName(TofuBlocks.TOFUTORCH_HELL.get()), TOFU_CEILING_TORCH_HELL.get(),
+					getRegistryName(TofuBlocks.TOFUTORCH_SOUL.get()), TOFU_CEILING_TORCH_SOUL.get());
 			//@formatter:on
 		}
 
