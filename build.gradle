@@ -3,7 +3,6 @@ plugins {
 	id 'eclipse'
 	id 'idea'
 	id 'net.neoforged.gradle.userdev' version '[7.0,7.1)'
-//	id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
 version = '1.27'
@@ -41,17 +40,13 @@ repositories {
             includeGroup "curse.maven"
         }
     }
-
-	maven {
-		url "https://maven.theillusivec4.top/"
-	}
 }
 
 dependencies {
-	implementation 'net.neoforged:neoforge:20.2.65-beta'
+	implementation 'net.neoforged:neoforge:20.2.88'
 
 	implementation "curse.maven:sbm-bone-torch-238695:4883926"
-	implementation "curse.maven:tofucraftreload-317469:4883747"
+	implementation "curse.maven:tofucraftreload-317469:4925744"
 }
 
 tasks.named('jar', Jar).configure {
