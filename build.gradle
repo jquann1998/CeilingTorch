@@ -5,7 +5,7 @@ plugins {
 	id 'net.neoforged.gradle.userdev' version '[7.0,7.1)'
 }
 
-version = '1.27'
+version = '1.28'
 group = 'bl4ckscor3.mod.ceilingtorch'
 
 base {
@@ -60,6 +60,7 @@ dependencies {
 	implementation "curse.maven:resourceful-lib-570073:5180841" //chipped dependency
 	implementation "curse.maven:sbm-bone-torch-238695:4949126"
 	implementation "curse.maven:smartbrainlib-661293:5273515" //occultism dependency
+	implementation "curse.maven:the-undergarden-379849:5188616"
 	implementation "curse.maven:tofucraftreload-317469:5272782"
 }
 

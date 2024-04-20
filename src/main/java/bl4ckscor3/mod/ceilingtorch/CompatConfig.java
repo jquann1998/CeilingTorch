@@ -13,6 +13,7 @@ import bl4ckscor3.mod.ceilingtorch.compat.chipped.ChippedCompat;
 import bl4ckscor3.mod.ceilingtorch.compat.occultism.OccultismCompat;
 import bl4ckscor3.mod.ceilingtorch.compat.reliquary.ReliquaryCompat;
 import bl4ckscor3.mod.ceilingtorch.compat.tofucraft.TofuCraftCompat;
+import bl4ckscor3.mod.ceilingtorch.compat.undergarden.UndergardenCompat;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.loading.FMLPaths;
@@ -58,7 +59,8 @@ public class CompatConfig {
 				makeEntry(builder, "chipped", () -> ChippedCompat::new),
 				makeEntry(builder, "occultism", () -> OccultismCompat::new),
 				makeEntry(builder, "reliquary", () -> ReliquaryCompat::new),
-				makeEntry(builder, "tofucraft", () -> TofuCraftCompat::new));
+				makeEntry(builder, "tofucraft", () -> TofuCraftCompat::new),
+				makeEntry(builder, "undergarden", () -> UndergardenCompat::new));
 		//@formatter:on
 	}
 
