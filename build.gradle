@@ -56,6 +56,7 @@ dependencies {
 	implementation "curse.maven:geckolib-388172:5188406" //occultism dependency
 	implementation "curse.maven:modonomicon-538392:5267193" //occultism dependency
 	implementation "curse.maven:occultism-361026:5254027"
+	implementation "curse.maven:reliquary-reincarnations-241319:5253732"
 	implementation "curse.maven:resourceful-lib-570073:5180841" //chipped dependency
 	implementation "curse.maven:sbm-bone-torch-238695:4949126"
 	implementation "curse.maven:smartbrainlib-661293:5273515" //occultism dependency
