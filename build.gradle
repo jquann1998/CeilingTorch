@@ -46,6 +46,7 @@ dependencies {
 	implementation 'net.neoforged:neoforge:20.4.232'
 	implementation 'curse.maven:jei-238222:5101381'
 
+	implementation "curse.maven:adorn-for-forge-438784:5189507"
 	implementation "curse.maven:bagus-lib-866533:5269655" //tofucraftreload dependency
 	implementation "curse.maven:sbm-bone-torch-238695:4949126"
 	implementation "curse.maven:tofucraftreload-317469:5272782"
