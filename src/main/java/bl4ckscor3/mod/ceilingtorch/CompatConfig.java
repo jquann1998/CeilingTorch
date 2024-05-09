@@ -9,12 +9,11 @@ import com.electronwill.nightconfig.core.io.WritingMode;
 import bl4ckscor3.mod.ceilingtorch.compat.adorn.AdornCompat;
 import bl4ckscor3.mod.ceilingtorch.compat.bambooeverything.BambooEverythingCompat;
 import bl4ckscor3.mod.ceilingtorch.compat.bonetorch.BoneTorchCompat;
-import bl4ckscor3.mod.ceilingtorch.compat.chipped.ChippedCompat;
+import net.neoforged.fml.ModContainer;
 import bl4ckscor3.mod.ceilingtorch.compat.occultism.OccultismCompat;
 import bl4ckscor3.mod.ceilingtorch.compat.reliquary.ReliquaryCompat;
 import bl4ckscor3.mod.ceilingtorch.compat.tofucraft.TofuCraftCompat;
 import bl4ckscor3.mod.ceilingtorch.compat.undergarden.UndergardenCompat;
-import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.common.ModConfigSpec;
@@ -26,7 +25,7 @@ public class CompatConfig {
 	private static CompatConfig config;
 	private Map<String, CompatInfo> builtInCompat;
 
-	public static void init(ModLoadingContext ctx) {
+	public static void init(ModContainer modContainer) {
 		ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
 		CommentedFileConfig fileConfig;
 
@@ -42,7 +41,7 @@ public class CompatConfig {
 		fileConfig.load();
 		fileConfig.save();
 		configSpec.setConfig(fileConfig);
-		ctx.registerConfig(ModConfig.Type.COMMON, configSpec, FILE_NAME);
+		modContainer.registerConfig(ModConfig.Type.COMMON, configSpec, FILE_NAME);
 	}
 
 	CompatConfig(ModConfigSpec.Builder builder) {

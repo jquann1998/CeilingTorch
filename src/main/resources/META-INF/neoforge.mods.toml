@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="MIT https://github.com/bl4ckscor3/CeilingTorch/blob/1.20.6/LICENSE"
+issueTrackerURL="https://github.com/bl4ckscor3/CeilingTorch/issues"
+authors="bl4ckscor3"
+
+[[mods]]
+	modId="ceilingtorch"
+	version="${file.jarVersion}"
+	displayName="Ceiling Torch"
+	description='''Makes torches placeable on the ceiling.'''
+	displayURL="https://www.curseforge.com/minecraft/mc-mods/ceiling-torch"
+
+[[dependencies.ceilingtorch]]
+    modId="neoforge"
+    type="required"
+    versionRange="[20.6,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.ceilingtorch]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.20.6,1.21)"
+    ordering="NONE"
+    side="BOTH"

@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.Mod.EventBusSubscriber;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.util.BlockSnapshot;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
@@ -20,6 +20,8 @@ import net.neoforged.neoforge.event.level.BlockEvent.EntityPlaceEvent;
 
 @EventBusSubscriber(modid = CeilingTorch.MODID)
 public class PlaceHandler {
+	private PlaceHandler() {}
+
 	@SubscribeEvent
 	public static void onRightClickBlock(RightClickBlock event) {
 		if (!event.getEntity().isSpectator()) { //because apparently this is a thing

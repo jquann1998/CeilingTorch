@@ -14,11 +14,11 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.ModList;
-import net.neoforged.fml.ModLoadingContext;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.EventBusSubscriber.Bus;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.common.Mod.EventBusSubscriber;
-import net.neoforged.fml.common.Mod.EventBusSubscriber.Bus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.RegisterEvent;
 
@@ -32,8 +32,8 @@ public class CeilingTorch {
 	public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, MODID);
 	private static boolean initialized = false;
 
-	public CeilingTorch(IEventBus modBus) {
-		CompatConfig.init(ModLoadingContext.get());
+	public CeilingTorch(IEventBus modBus, ModContainer modContainer) {
+		CompatConfig.init(modContainer);
 		BLOCKS.register(modBus);
 		BLOCK_ENTITIES.register(modBus);
 		preliminaryCompatList.put("minecraft", VanillaCompat::new);
