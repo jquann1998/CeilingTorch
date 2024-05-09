@@ -58,7 +58,7 @@ dependencies {
 	implementation "curse.maven:occultism-361026:5254027"
 	implementation "curse.maven:reliquary-reincarnations-241319:5253732"
 	implementation "curse.maven:resourceful-lib-570073:5180841" //chipped dependency
-	implementation "curse.maven:sbm-bone-torch-238695:4949126"
+	implementation "curse.maven:sbm-bone-torch-238695:5313151"
 	implementation "curse.maven:smartbrainlib-661293:5273515" //occultism dependency
 	implementation "curse.maven:the-undergarden-379849:5188616"
 	implementation "curse.maven:tofucraftreload-317469:5272782"
