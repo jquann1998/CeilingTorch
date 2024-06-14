@@ -68,7 +68,7 @@ public class TofuCraftCompat implements ICeilingTorchCompat {
 			.lightLevel(state -> 14)
 			.noOcclusion()
 			.sound(SoundType.SNOW),
-			ParticleTypes.FLAME, TofuBlocks.TOFUTORCH_SOUL));
+			ParticleTypes.SOUL_FIRE_FLAME, TofuBlocks.TOFUTORCH_SOUL));
 	//@formatter:on
 	private Map<ResourceLocation, Block> placeEntries;
 

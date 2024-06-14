@@ -2,14 +2,14 @@ plugins {
 	id 'java-library'
 	id 'eclipse'
 	id 'idea'
-	id 'net.neoforged.gradle.userdev' version '7.0.105'
+	id 'net.neoforged.gradle.userdev' version '7.0.+'
 }
 
 version = '1.29'
 group = 'bl4ckscor3.mod.ceilingtorch'
 
 base {
-	archivesName = 'ceilingtorch-1.20.6'
+	archivesName = 'ceilingtorch-1.21'
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
@@ -43,13 +43,12 @@ repositories {
 }
 
 dependencies {
-	implementation 'net.neoforged:neoforge:20.6.48-beta'
+	implementation 'net.neoforged:neoforge:21.0.4-beta'
 //	implementation 'curse.maven:jei-238222:5101381'
 
-	implementation "curse.maven:bagus-lib-866533:5315256" //tofucraftreload dependency
-	implementation "curse.maven:sbm-bone-torch-238695:5313151"
-	implementation "curse.maven:the-undergarden-379849:5322442"
-	implementation "curse.maven:tofucraftreload-317469:5326439"
+	implementation "curse.maven:bagus-lib-866533:5424808" //tofucraftreload dependency
+	implementation "curse.maven:sbm-bone-torch-238695:5427882"
+	implementation "curse.maven:tofucraftreload-317469:5424864"
 }
 
 tasks.named('jar', Jar).configure {
